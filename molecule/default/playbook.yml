@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  environment:
+    ansible_user: ansible
+  roles:
+    - role: redbeard28.admin_tools

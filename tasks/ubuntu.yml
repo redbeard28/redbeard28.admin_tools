@@ -1,0 +1,18 @@
+---
+- name: "Install CURL package"
+  apt:
+    package: curl
+    state: present
+    update_cache: yes
+
+- name: "Install WGET package"
+  apt:
+    package: wget
+    state: present
+    update_cache: yes
+
+- name: "Install NET-TOOLS package"
+  apt:
+    package: net-tools
+    state: present
+    update_cache: yes

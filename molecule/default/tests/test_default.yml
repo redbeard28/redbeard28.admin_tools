@@ -1,0 +1,11 @@
+---
+file:
+  /usr/bin/wget:
+    # required attributes
+    exists: true
+  /usr/bin/curl:
+    # required attributes
+    exists: true
+  /usr/bin/netstat:
+    # required attributes
+    exists: true

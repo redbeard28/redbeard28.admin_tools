@@ -1,0 +1,12 @@
+---
+- name: "Install wget on Centos or RHEL"
+  yum: name=wget state=present
+
+- name: "Install curl on Centos or RHEL"
+  yum: name=curl state=present
+
+- name: "Install net-tools on Centos or RHEL"
+  yum: name=net-tools state=present
+
+- name: "Install jq JSON parser on Centos or RHEL"
+  yum: name=jq state=present
