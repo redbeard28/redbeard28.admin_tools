@@ -3,6 +3,12 @@ sudo: required
 language: python3
 services: docker
 
+before_install:
+  - sudo apt-get install -y python3
+addons:
+  apt:
+    update: true
+
 env:
   - version=">=2.7,<2.8" distro="centos-latest"
   - version="" distro="centos-latest"
