@@ -24,8 +24,8 @@ install:
   - sudo python3.4 -m pip install --upgrade pip
   - if [ "${version}" != "devel" ] ; then sudo python3.4 -m pip install ansible"${version}" ; fi
   - if [ "${version}" = "devel" ] ; then sudo python3.4 -m pip install git+https://github.com/ansible/ansible.git@devel ; fi
-  - sudo python3.4 -m pip install molecule
-  - sudo python3.4 -m pip install docker
+  - sudo python3.4 -m pip install --user molecule
+  - sudo python3.4 -m pip install --user docker
 
 script:
   - if [ "${expectation}" = "fail" ] ; then ! molecule test --scenario-name "${distro}" ; else molecule test --scenario-name "${distro}" ; fi
