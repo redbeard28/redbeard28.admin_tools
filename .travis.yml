@@ -1,0 +1,25 @@
+---
+sudo: required
+language: python3
+services: docker
+
+env:
+  - version=">=2.7,<2.8" distro="centos-latest"
+  - version="" distro="centos-latest"
+
+matrix:
+  allow_failures:
+    - env: version="devel" distro="centos-latest"
+
+cache:
+  - pip
+
+install:
+  - python3 -m pip install --upgrade pip
+  - if [ "${version}" != "devel" ] ; then python3 -m pip install ansible"${version}" ; fi
+  - if [ "${version}" = "devel" ] ; then pip install git+https://github.com/ansible/ansible.git@devel ; fi
+  - python3 -m pip install molecule
+  - python3 -m pip install docker
+
+script:
+  - if [ "${expectation}" = "fail" ] ; then ! molecule test --scenario-name "${distro}" ; else molecule test --scenario-name "${distro}" ; fi
