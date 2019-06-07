@@ -21,11 +21,11 @@ cache:
   - pip
 
 install:
-  - python3.4 -m pip install --upgrade pip
-  - if [ "${version}" != "devel" ] ; then python3.4 -m pip install ansible"${version}" ; fi
-  - if [ "${version}" = "devel" ] ; then python3.4 -m pip install git+https://github.com/ansible/ansible.git@devel ; fi
-  - python3.4 -m pip install molecule
-  - python3.4 -m pip install docker
+  - sudo python3.4 -m pip install --upgrade pip
+  - if [ "${version}" != "devel" ] ; then sudo python3.4 -m pip install ansible"${version}" ; fi
+  - if [ "${version}" = "devel" ] ; then sudo python3.4 -m pip install git+https://github.com/ansible/ansible.git@devel ; fi
+  - sudo python3.4 -m pip install molecule
+  - sudo python3.4 -m pip install docker
 
 script:
   - if [ "${expectation}" = "fail" ] ; then ! molecule test --scenario-name "${distro}" ; else molecule test --scenario-name "${distro}" ; fi
