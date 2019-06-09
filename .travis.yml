@@ -1,34 +1,22 @@
 ---
-sudo: required
-language: python3
+language: python
 services: docker
-
-before_install:
-  - sudo apt update
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-
-addons:
-  apt:
-    update: true
+python:
+  - "3.6"
 
 env:
-  - version=">=2.7,<2.8" distro="centos-latest"
-
-matrix:
-  allow_failures:
-    - env: version="devel" distro="centos-latest"
-
-cache:
-  - pip
+  global:
+    - ROLE_NAME: redbeard28.gitclient
+  matrix:
+    - DISTRO: centos-latest
+    - DISTRO: centos-6
+    - DISTRO: ubuntu-16.04
+    - DISTRO: ubuntu-18.04
+    - DISTRO: debian-9
+    - DISTRO: debian-10
 
 install:
-  - sudo apt update
-  - sudo apt upgrade -y
-  - sudo apt install -y ansible
-  - sudo apt install -y python3 python3-pip
-  - sudo python3 -m pip install --user molecule
-  - sudo python3 -m pip install --user molecule[docker]
-  - sudo python3 -m pip install --user docker
+  - pip install molecule docker molecule[docker]
 
 script:
-  - molecule test --scenario-name "${distro}"
+  - molecule test --scenario-name $DISTRO
