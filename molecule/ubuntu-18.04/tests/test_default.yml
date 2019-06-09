@@ -6,7 +6,7 @@ file:
   /usr/bin/curl:
     # required attributes
     exists: true
-  /usr/bin/jq:
+  /bin/jq:
     # required attributes
     exists: true
   /bin/netstat:

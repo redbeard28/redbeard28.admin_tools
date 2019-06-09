@@ -1,3 +1,5 @@
+![Travis-ci](https://api.travis-ci.org/redbeard28/redbeard28.admin_tools.svg?branch=master)
+
 admin_tools
 =========
 
