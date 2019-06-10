@@ -1,4 +1,7 @@
-![Travis-ci](https://api.travis-ci.org/redbeard28/redbeard28.admin_tools.svg?branch=master)
+![Travis-ci](https://api.travis-ci.org/redbeard28/redbeard28.admin_tools.svg?branch=master&style=plastic)
+![GitHub release](https://img.shields.io/github/release/redbeard28/redbeard28.admin-tools.svg?color=green&logo=github&style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/redbeard28/redbeard28.admin_tools.svg?style=plastic)
+![GitHub](https://img.shields.io/github/license/redbeard28/redbeard28.admin_tools.svg?style=plastic)
 
 admin_tools
 =========
