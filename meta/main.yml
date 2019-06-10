@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Jeremie CUADRADO
-  description: Install some useful tools for linux admin
+  description: "Install some useful tools for linux admin"
   company: redbeard-consulting
 
   license: license GPLv3

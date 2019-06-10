@@ -19,6 +19,4 @@ install:
   - pip install molecule docker molecule[docker]
 
 script:
-  - molecule converge --scenario-name $DISTRO
-  - molecule destroy --scenario-name $DISTRO
-
+  - molecule test --scenario-name $DISTRO
