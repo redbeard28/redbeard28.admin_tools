@@ -19,6 +19,6 @@
 
 - name: "{{ ansible_distribution }} - Install jq package"
   apt:
-    package: net-tools
+    package: jq
     state: present
     update_cache: yes
