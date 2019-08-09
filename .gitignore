@@ -85,5 +85,9 @@ fabric.properties
 # Sonarlint plugin
 .idea/sonarlint
 
+# Molecule Framework
+molecule/default/tests/__pycache__
+
 # End of https://www.gitignore.io/api/intellij
 .idea/
+.DS_Store
