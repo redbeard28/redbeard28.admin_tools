@@ -1,3 +1,8 @@
+# DEPRECATED !
+
+## Please go to [ansible-role-basetools](https://github.com/redbeard28/ansible-role-basetools.git)
+
+
 ![Travis-ci](https://api.travis-ci.org/redbeard28/redbeard28.admin_tools.svg?branch=master&style=plastic)
 ![GitHub release](https://img.shields.io/github/release/redbeard28/redbeard28.admin-tools.svg?color=green&logo=github&style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/redbeard28/redbeard28.admin_tools.svg?style=plastic)
